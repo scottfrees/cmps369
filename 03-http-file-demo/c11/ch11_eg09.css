@@ -1,0 +1,26 @@
+/* Style sheet for table example */
+
+body {
+   color : #000000;
+   background-color : #ffffff;
+}
+
+h1 {
+  font-size : 18pt;
+}
+
+p {
+  font-size : 12pt;
+}
+
+.item {
+  list-style-type : none;
+  width : 200px;
+  height : 25px;
+  background : #ccc;
+  padding : 2px;
+}
+.selected {
+  background : #666;
+  color : #fff;
+}

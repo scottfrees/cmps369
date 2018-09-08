@@ -1,0 +1,7 @@
+label {
+	display : inline-block;
+	width : 200px;
+}
+#emailFRom, #urlSite {
+	width : 300px;
+}

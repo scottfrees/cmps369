@@ -1,0 +1,30 @@
+/* Style sheet for table example */
+
+body {
+  font-family : sans-serif; 
+   color : #000000;
+   background-color : #ffffff;
+}
+
+h1 {
+  font-size : 18pt;
+}
+
+p {
+  font-size : 12pt;
+}
+dd , dt {
+  margin : 10px;
+  width : 400px;
+  padding : 10px;  
+}  
+dt {
+  height : 50px;  
+  background : #99ccff;
+  font-size : 150%;
+}
+dd {
+  height : 150px;  
+  background : #ccccff;
+  display : none;
+}

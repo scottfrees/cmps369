@@ -1,0 +1,18 @@
+/* style sheet demonstrating styles of links */
+body {
+  background-color : #ffffff;
+}
+#perspective {
+  top : 100px;
+  left : 50px;
+  position : absolute;
+  -webkit-transform : perspective(500px) rotateY(75deg);
+  -moz-transform : perspective(500px) rotateY(75deg);
+  -ie-transform : perspective(500px) rotateY(75deg);
+  transform : perspective(500px) rotateY(75deg);
+  width : 500px;
+  height : 200px;
+  background : #ccff00;
+}
+
+

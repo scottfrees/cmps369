@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS Counters</title>
+  <style type="text/css">
+  /* Style sheet for CSS counters */
+  body {
+    counter-reset: chapter; 
+    counter-reset: section; }
+  h1:before {
+    content: "Chapter " counter(chapter) ": "; 
+  }
+  h1 {
+    counter-increment: chapter; 
+    counter-reset: section;
+  }
+  h2:before { 
+    content: counter(chapter) "." counter(section) " "; 
+  } 
+  h2 {
+    counter-increment: section; 
+  }
+</style>
+</head>
+<body>
+<h1> Introducing Web Technologies</h1>
+  <h2>Introducing HTML</h2>
+  <h2>Introducing CSS</h2>
+  <h2>Introducing XHTML</h2>
+<h1> Structure of Documents</h1>
+  <h2>Text</h2>
+  <h2>Lists</h2>
+  <h2>Tables</h2>
+  <h2>Forms</h2>
+</body>
+</html>

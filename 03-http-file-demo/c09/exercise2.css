@@ -1,0 +1,15 @@
+body {
+  background : #ffffff;
+  font-family : arial, verdana, sans-serif;
+  font-size : 12px;
+}
+#hover {
+  width : 200px;
+  height : 200px;
+  background-color : #ffcc00;
+  text-align: center;
+  line-height:200px;
+}
+#hover:hover {
+  background-color : #00ccff;
+}

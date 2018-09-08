@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Example Cafe - community cafe in Newquay, Cornwal, UK</title>
+<link rel="stylesheet" href="css/interface.css">
+</head>
+<body class="contact">
+<div id="page">
+  <header> <a href="index.html" id="top"><img src="images/logo.gif" alt="example cafe logo" width="194" height="80" ></a>
+    <nav id="navigation"> <a href="index.html">HOME</a> <a href="menu.html">MENU</a> <a href="recipes.html">RECIPES</a> CONTACT </nav>
+  </header>
+  <article>
+    <h1>Contact</h1>
+    <section id="contact">
+      <form action="data/response.json" method="post" id="frmContact">
+        <fieldset>
+          <legend>Your Message</legend>
+          <p>
+            <label for="emailFrom" class="required">Your email</label>
+            <input type="email" name ="emailFrom" 
+           id="emailFrom" maxLength="250" 
+           placeholder="rob@example.com" class="email required"
+           tabindex="0">
+          </p>
+          <p>
+            <label for="emailBody" class="required">Your Message</label>
+            <textarea name="txtBody" id="emailBody"
+                  tabindex="2" 
+                  class="required"></textarea>
+          </p>
+          <p class="key">Indicates required field</p>
+        </fieldset>
+        <fieldset>
+          <legend>How you found us:</legend>
+          <p>
+            <label for="selReferrer">How did you hear of us</label>
+            <select name="selReferrer" tabindex="3">
+              <option value="google">Google</option>
+              <option value="ad">Local newspaper ad</option>
+              <option value="friend">Friend</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="newsletterSignup">Newsletter</label>
+            <input type="checkbox" name="chkBody" id="newsletterSignup" checked tabindex="3">
+            Ensure this box is checked if you would like to receive email updates</p>
+        </fieldset>
+        <p>
+          <input type="submit" value="Submit">
+        </p>
+      </form>
+    </section>
+    <p>
+    <address>
+    12 Sea View, Newquay, Cornwall, UK
+    </address>
+    </p>
+    <p><a href="http://maps.google.com/maps?q=newquay">Find us on Google Maps</a></p>
+  </article>
+</div>
+<script src="js/jquery-1.8.2.min.js"></script> 
+<script src="js/jquery.validate.min.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>

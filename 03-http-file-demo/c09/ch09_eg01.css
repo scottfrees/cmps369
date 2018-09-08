@@ -1,0 +1,41 @@
+/* style sheet demonstrating CSS3 Selectors */
+body {
+  background-color : #ffffff;
+}
+a {
+  font-family: arial, verdana, sans-serif; 
+  font-size : 12px;
+  font-weight : bold;
+}
+a:link {
+  color : #0000ff;
+  text-decoration : none;
+}
+a[ href^="https" ] {
+  color : red;
+}
+a[ href$="org/" ] {
+  color : purple;
+}
+input:disabled{
+  border : 2px solid #000000;
+};
+p:nth-child(2) {
+  font-family : arial, helvetica, sans-serif;
+} 
+p:first-child {
+  font-size : 125%;
+} 
+p:nth-child(3) {
+  color : #006699;
+}
+div:empty {
+  height : 100px;
+  width : 200px;
+  background : #666666;
+} 
+div~p {
+  font-size : 200%;
+  color : #666666;
+  font-family : consolas, courier, "courier new", monospace;
+}

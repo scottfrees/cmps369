@@ -1,0 +1,61 @@
+/* style sheet demonstrating CSS3 animations */
+body {
+  background: #ffffff;
+  overflow:hidden;
+}
+#animated {
+  position : absolute;
+  width : 100px;
+  height : 100px;
+  left:0px;
+  top:100px;
+  background: #ffcc00;
+ }
+@-webkit-keyframes scroll {
+  to {
+    left:100%;
+    -webkit-transform: rotate(180deg);
+  }
+}
+@-moz-keyframes scroll {
+  to {
+    left:100%;
+    -moz-transform: rotate(180deg);
+  }
+}
+@-o-keyframes scroll {
+  to {
+    left:100%;
+    -o-transform: rotate(180deg);
+  }
+}
+@keyframes scroll {
+  to {
+    left:100%;
+    transform: rotate(180deg);
+  }
+}
+div {
+  -webkit-animation-name: scroll;
+  -moz-animation-name: scroll;
+  -o-animation-name: scroll;
+  animation-name: scroll;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+}​  
+
+

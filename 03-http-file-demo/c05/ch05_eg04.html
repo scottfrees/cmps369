@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Spanning columns</title>
+  <style type="text/css">
+    td {
+      height : 100px;
+      width : 100px;
+    } 
+    .one {
+      background-color : #efefef;
+    }
+    .two {
+      background-color : #999999;
+    }
+    .three {
+      background-color : #000000;
+    }
+  </style>
+</head>
+
+<body>
+<table>
+<caption>Spanning columns using the colspan attribute</caption>
+  <tr>
+    <td class="one">&nbsp;</td>
+    <td class="two">&nbsp;</td>
+    <td class="three">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="one">&nbsp;</td>
+    <td colspan="2" class="two">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" class="one">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

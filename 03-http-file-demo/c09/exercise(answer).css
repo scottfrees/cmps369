@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'InconsolataMedium';
+    src: url('fonts/Inconsolata-webfont.eot');
+    src: url('fonts/Inconsolata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Inconsolata-webfont.woff') format('woff'),
+         url('fonts/Inconsolata-webfont.ttf') format('truetype'),
+         url('fonts/Inconsolata-webfont.svg#InconsolataMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+  background : #ffffff url(bg-alpha.png) repeat-y;
+  font-family : arial, verdana, sans-serif;
+  font-size : 12px;
+}
+#contents {
+  padding : 10px;
+  font-family : InconsolataMedium;
+  background-color : hsla( 0,0%,80%,.7 );
+  width : 400px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px; 
+}
+

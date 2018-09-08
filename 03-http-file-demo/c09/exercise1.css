@@ -1,0 +1,11 @@
+body {
+  background : #ffffff url(bg-alpha.png) repeat-y;
+  font-family : arial, verdana, sans-serif;
+  font-size : 12px;
+}
+#contents {
+  padding : 10px;
+  background-color : hsl( 0,0%,80% );
+  width : 400px;
+}
+

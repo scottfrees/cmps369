@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Reply to ad</title>
+</head>
+<body>
+<h1>Reply to ad</h1>
+<p>Use the following form to respond to the ad:</p>             
+<form action="http://www.example.com/ads/respond.aspx" method="post"
+      name="frmRespondToAd">
+  <p><label for="emailTo">To</label><br>
+    <input type="text" name="txtTo" readonly="readonly" id="emailTo"
+         size="20" value="Star Seller">
+  </p>
+  <p><label for="emailFrom">To</label></br>
+    <input type="text" name="txtFrom" id="emailFrom" size="20">
+  </p>
+  <p><label for="emailSubject">Subject</label><br>
+    <input type="text" name="txtSubject" id="emailSubject"
+        size="50">
+  </p>
+  <p><label for="emailBody">Body</label><br>
+    <textarea name="txtBody" id="emailBody" cols="50" rows="10">
+    </textarea>
+  </p>
+  <input type="submit" value="Send email" >              
+</form>       
+</body>
+</html>

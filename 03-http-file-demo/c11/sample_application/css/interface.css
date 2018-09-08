@@ -1,0 +1,98 @@
+/* style sheet for example cafe */
+@font-face {
+  font-family: 'DroidSerifRegular';
+  src: url('../fonts/DroidSerif-Regular-webfont.eot');
+  src: url('../fonts/DroidSerif-Regular-webfont.eot?#iefix') 
+       format('embedded-opentype'),
+     url('../fonts/DroidSerif-Regular-webfont.woff') format('woff'),
+     url('../fonts/DroidSerif-Regular-webfont.ttf') format('truetype'),
+     url('../fonts/DroidSerif-Regular-webfont.svg#DroidSerifRegular') 
+     format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'DroidSerifItalic';
+  src: url('../fonts/DroidSerif-Italic-webfont.eot');
+  src: url('../fonts/DroidSerif-Italic-webfont.eot?#iefix') 
+       format('embedded-opentype'),
+    url('../fonts/DroidSerif-Italic-webfont.woff') format('woff'),
+    url('../fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSerif-Italic-webfont.svg#DroidSerifItalic') 
+    format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DroidSerifBold';
+  src: url('../fonts/DroidSerif-Bold-webfont.eot');
+  src: url('../fonts/DroidSerif-Bold-webfont.eot?#iefix') 
+       format('embedded-opentype'),
+    url('../fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+    url('../fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSerif-Bold-webfont.svg#DroidSerifBold') 
+    format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DroidSerifBoldItalic';
+  src: url('../fonts/DroidSerif-BoldItalic-webfont.eot');
+  src: url('../fonts/DroidSerif-BoldItalic-webfont.eot?#iefix') 
+       format('embedded-opentype'),
+    url('../fonts/DroidSerif-BoldItalic-webfont.woff') format('woff'),
+    url('../fonts/DroidSerif-BoldItalic-webfont.ttf') format('truetype'),
+    url('../fonts/DroidSerif-BoldItalic-webfont.svg#DroidSerifBoldItalic') format('svg');
+   DroidSerifRegular, font-weight: normal;
+  font-style: normal;
+}
+
+body {font-family:arial, verdana, sans-serif;
+}
+
+#page {
+  width:960px;
+  border:10px solid #3399cc;
+  padding:40px;
+  margin:20px;
+}
+
+h1, h2, h3, h4 {
+  font-family : georgia, times, serif;
+  color:#66666;
+}
+h1 {
+  font-family : DroidSerifBold, georgia, times, serif;
+}
+
+h2  {
+  padding: 0 0 0 40px;
+  background : url(../images/plus-minus.png) no-repeat 0px 0px;
+}
+h2.expanded  {
+  background : url(../images/plus-minus.png) no-repeat 0px -30px;
+}
+p {
+  color:#333333;
+  font-size:90%;
+  line-height:1.3em;
+}
+
+#navigation {
+  border-top:1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6;
+  padding:10px 0px 10px 0px;
+  margin:20px 0px 20px 0px;
+}
+
+#navigation a {
+  color:#3399cc;
+  text-decoration:none;
+  margin-right:20px;
+}
+  
+.main_image {
+  border:1px solid #000000;
+  margin:0px 10px 10px 0px;
+}
+  

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple Form Validation</title>
+<link href="css/ch12_eg07.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+<form action="data/ch12_eg07.json" method="post" id="frmContact">
+  <p><label for="emailFrom">Your email</label>
+    <input type="email" name ="emailFrom" 
+           id="emailFrom" maxLength="250" 
+           placeholder="rob@example.com">
+  </p>
+  <p><label for="urlSite">Your Site</label>
+    <input type="url" name="urlSite" 
+           id="urlSite" maxLength="250" 
+           placeholder="http://htmlcssjavascript.com">
+  </p>
+  <p><input type="submit" value="Submit"></p>
+</form>
+</div>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="ch12_eg07.js"></script>
+</body>
+</html>

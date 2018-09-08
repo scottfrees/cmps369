@@ -1,0 +1,35 @@
+/* style sheet demonstrating CSS3 HSL Example */
+body {
+  background-color : #ffffff;
+}
+div {
+ height:25px;
+ width:300px;
+}
+.one {
+  background-color : hsl( 111,50%,50% );
+}
+.two {
+  background-color : hsl( 222,50%,50% );
+}
+.three {
+  background-color : hsl( 333,50%,50% );
+}
+.four {
+  background-color : hsl( 333,10%,67% );
+}
+.five {
+  background-color : hsl( 333,50%,67% );
+}
+.six {
+  background-color : hsl( 333,90%,67% );
+}
+.seven {
+  background-color : hsl( 333,65%,67% );
+}
+.eight {
+  background-color : hsl( 333,65%,44% );
+}
+.nine {
+  background-color : hsl( 333,65%,22% );
+}

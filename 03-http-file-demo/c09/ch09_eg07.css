@@ -1,0 +1,32 @@
+/* style sheet demonstrating css3 transforms */
+body {
+  background: #ffffff url(bg.png) no-repeat;
+}
+div {
+  position : absolute;
+  width : 500px;
+  height : 200px;
+ }
+#rotate {
+  -webkit-transform : rotate(20deg);
+  -moz-transform : rotate(20deg);
+  -ms-transform : rotate(20deg);
+  -o-transform : rotate(20deg);
+  transform : rotate(20deg);
+  background : #00ffcc;
+  top : 100px;
+  left : 50px;
+} 
+#scale {
+  -webkit-transform : scale(0.5);
+  -moz-transform : scale(0.5);
+  -ms-transform : scale(0.5);
+  -o-transform : scale(0.5);
+  transform : scale(0.5);
+  background : #ccff00;
+  top : 400px;
+  left : 50px;
+}
+  
+
+

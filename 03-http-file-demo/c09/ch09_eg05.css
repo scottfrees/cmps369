@@ -1,0 +1,24 @@
+/* style sheet demonstrating CSS3 Multi-Column Layout */
+body {
+  background-color : #ffffff;
+}
+.fixed-width {
+  width:500px;
+  height:200px;
+  -webkit-column-count: 3;  
+  -webkit-column-gap: 15px; 
+  -moz-column-count: 3;     
+  -moz-column-gap: 15px; 
+  column-count: 3;
+  column-gap: 15px; 
+}
+.percentage-width {
+  width:100%;
+  height:200px;
+  -webkit-column-width: 100px;  
+  -webkit-column-gap: 15px; 
+  -moz-column-width: 100px;     
+  -moz-column-gap: 15px; 
+  column-width: 100px;
+  column-gap: 15px; 
+}

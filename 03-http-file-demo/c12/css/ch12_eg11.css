@@ -1,0 +1,16 @@
+#selectable .ui-selecting { 
+  background : #ccc; 
+}
+#selectable .ui-selected { 
+  background : #0099ff; 
+  color : #fff; }
+#selectable { 
+  list-style-type : none; 
+  width : 300px; 
+}
+#selectable li { 
+  margin : 5px; 
+  padding : 5px; 
+  height : 15px; 
+  border : 1px solid black;
+}

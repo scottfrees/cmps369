@@ -1,0 +1,42 @@
+body {
+  background : #ffffff;
+  font-family : arial, verdana, sans-serif;
+  font-size : 12px;
+}
+#hover {
+  width : 200px;
+  height : 200px;
+  background-color : #ffcc00;
+  -webkit-transition-property : background-color,
+    -webkit-border-radius; 
+  -moz-transition-property : background-color,
+    -moz-border-radius; 
+  -o-transition-property :  background-color,
+    -o-border-radius; 
+  transition-property :  background-color,
+     border-radius; 
+  -webkit-transition-duration: 1s; 
+  -moz-transition-duration: 1s; 
+  -o-transition-duration: background-color 1s; 
+  transition-duration: background-color 1s; 
+  text-align: center;
+  line-height:200px;
+}
+#hover:hover {
+  width : 200px;
+  background-color : #00ccff;
+  -webkit-transition-property : background-color,
+    -webkit-border-radius; 
+  -moz-transition-property : background-color,
+    -moz-border-radius; 
+  -o-transition-property :  background-color,
+    -o-border-radius; 
+  transition-property :  background-color,
+    border-radius; 
+ -webkit-transition-duration: 1s; 
+  -moz-transition-duration: 1s; 
+  -o-transition-duration: background-color 1s; 
+  transition-duration: background-color 1s; 
+ -webkit-border-radius : 100px;
+  border-radius : 100px;
+}

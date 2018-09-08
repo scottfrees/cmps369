@@ -1,0 +1,15 @@
+/* style sheet demonstrating CSS3 HSLA vs Opacity Example */
+body {
+  background-color : #ffffff;
+}
+div {
+ height : 100px;
+ width : 300px;
+}
+.opacity {
+  opacity : .5;
+  background-color : #ff0000;
+}
+.hsla {
+  background-color : hsla( 0,100%,50%,.5 )
+}

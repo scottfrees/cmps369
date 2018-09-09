@@ -6,7 +6,6 @@
  
 int main()
 {
- 
     char str[100];
     int listen_fd, comm_fd;
     int read_len;
@@ -34,7 +33,7 @@ int main()
      
             read_len = read(comm_fd,str,100);
             if ( read_len) {
-                printf("Echoing back - %s",str);
+                printf("C Server - Responding to client -> %s",str);
      
                 write(comm_fd, str, strlen(str)+1);
             }

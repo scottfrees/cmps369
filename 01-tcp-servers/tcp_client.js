@@ -1,32 +1,26 @@
-var net = require('net');
-var host = 'localhost';
-var port = 3000;
+const net = require('net');
+const host = 'localhost';
+const port = 3000;
 
 /*  This just sets up node to read some lines from the console */
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
+const readline = require('readline');
+const ui = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
 });
 
-console.log("Please type messages:  ");
-rl.on('line', function (text) {
-	/* On each line entered, send the text to the server via
-	   a new socket and print out the response.
+const socket = new net.Socket();
 
-	   Alternatively, we could keep one socket the entire time...
-	*/
-  	var client = new net.Socket();
-	client.connect(port, host, function() {
-    	client.write(text);
+socket.connect(port, host, function() {
+	console.log("Please type messages:  ");
+
+	// When user enters line, write it to socket (server)
+	ui.on('line', function(text) {
+		socket.write(text);
 	});
 
-	client.on('data', function(data) {
-	    console.log('Server Response: ' + data);
-	    client.destroy();
+	// When data arrives from server, print it...
+	socket.on('data', function(data) {
+		console.log('Server Response: ' + data);
 	});
 });
-
-
-
-

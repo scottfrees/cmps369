@@ -1,0 +1,16 @@
+{
+  "name": "04-http-forms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "connect-example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "morgan": "^1.9.1"
+  }
+}

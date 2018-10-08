@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - guess page</title>
+</head>
+<body>
+
+    <form action = "guess" method = "post">
+    <p>Sorry, your guess was too <%= message %>!</p>
+
+    <label for="guess">Your next guess:  </label>
+    <input type="text" name="guess"/>
+
+    <button type="submit">Guess</button>
+
+    <input type="hidden" value = "<%= value %>" name="value"/>
+    </form>
+</body>
+</html>

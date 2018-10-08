@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - start page</title>
+</head>
+<body>
+
+    <form action = "guess" method = "post">
+    <p>Welcome to our guessing game.  The server is thinking of a number between 1 and 10 - try to guess what it is!</p>
+
+    <label for="guess">Your guess:  </label>
+    <input type="text" name="guess"/>
+
+    <button type="submit">Guess</button>
+
+    <input type="hidden" value = "<%= value %>" name="value"/>
+    </form>
+</body>
+</html>

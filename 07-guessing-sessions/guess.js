@@ -7,13 +7,25 @@ const bodyparse = require('body-parser');
 const cookieparser = require('cookie-parser');
 const ex_session = require('express-session');
 
+const render = (res, view, model) => {
+    ejs.renderFile(`templates/${view}.ejs`, model,
+        function(err, result) {
+            if (!err) {
+                res.end(result);
+            }
+            else {
+                res.end("An error occurred");
+            }
+        }
+    );
+}
+
 
 const get_start_page = (req, res) => {
-    // The start page is rendered with a newly
-    // generated secret value, which is passed
-    // to the ejs renderer via the model.
+    // The start page is rendered.
     // In this example, we place the secret 
-    // number in the actual HTML as a hidden form field.
+    // number in the session so the client never
+    // receives it.
 
     const value = Math.floor((Math.random() * 10) + 1);
     console.log(`The secret number is ${value}`);
@@ -63,18 +75,6 @@ const serve = (req, res) => {
     }
 }
 
-render = (res, view, model) => {
-    ejs.renderFile(`templates/${view}.ejs`, model,
-        function (err, result) {
-            if (!err) {
-                res.end(result);
-            }
-            else {
-                res.end("An error occurred");
-            }
-        }
-    );
-}
 
 
 

@@ -42,6 +42,7 @@ const process_post = (req, res) => {
         body += chunk;
     });
     req.on('end', () => {
+        // We'll build the HTML in a smarter way shortly...
         let response = "<html><body><h1>Posted data</h1>";
         const post = qs.parse(body);
         for (const q in post) {
@@ -51,6 +52,8 @@ const process_post = (req, res) => {
         response += "</body></html>";
         res.end(response);
     });
+
+    //console.log("All done... right?");
 }
 
 const process_get = (req, res) => {

@@ -5,17 +5,19 @@
 	<link rel='stylesheet' href='./guess.css'/>
 </head>
 <body>
-	<div class='instructions'>
+	
+	<div class='instructions container'>
 		<p>
 			Welcome to our guessing game.  The server is thinking of a number between 1 and 10 - try to guess what it is!
 		</p>
 	</div>
-    <form action = "guess" method = "post">
+	
+    <form action = "guess" method = "post", class='container'>
 	    <div>
 		    <label for="guess">Your guess:  </label>
 		    <input type="text" name="guess"/>
 		    <button type="submit">Guess</button>
 	    </div>
-    </form>
+	</form>
 </body>
 </html>

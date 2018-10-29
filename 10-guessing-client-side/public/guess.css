@@ -1,0 +1,51 @@
+body {
+	font-family: "Verdana", arial;
+	padding: 2em;
+}
+
+.container {
+	border-radius: 20px;
+	padding: 2em;
+	border-width: 5px;
+	border-style: solid;
+}
+
+form {
+	text-align: right;
+	background-color: #EEE;
+	border-color: #CCC;
+	width:50%;
+}
+
+.instructions {
+	background-color: #FFFFB8;
+	border-color: #E6B800;
+	float:right;
+	width: 30%;
+}
+
+li {
+    padding:0.5em;
+    text-align:center;
+    list-style-type:none;
+    border-style: solid;
+    border-width: 5px;
+    border-radius:20px;
+    max-width:30%;
+    margin-bottom:0.5em;
+}
+
+
+.highGuess {
+	background-color:#A64D4D;
+    border-color:   #8D1919;
+}
+
+.lowGuess {
+    background-color:#8099E6;
+    border-color:   #335CD6;
+}
+
+#success-message {
+	float:none;
+}

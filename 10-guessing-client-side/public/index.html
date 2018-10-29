@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - pure JavaScript</title>
+    <link rel='stylesheet' type = 'text/css' href='guess.css'/>
+    <script src='guess.js'></script>
+
+
+
+</head>
+<body onload='init_game()'>
+    <section id='start_page'>
+        <div class='container instructions'>
+            <p>
+                Welcome to our guessing game.  The "server" is thinking of a number between 1 and 10 - try to guess what it is!
+            </p>
+        </div>
+        <form class='container'>
+            <div>
+                <label for="guess">Your guess:  </label>
+                <input id='start_guess' type="text" name="guess"/>
+                <button onclick='on_guess("start_guess")' type="button">Guess</button>
+            </div>
+        </form>
+    </section>
+
+
+    <section id='check_page'>
+        <form method='post' class='container'>
+            <div>
+                <label for="guess">Your next guess:  </label>
+                <input id='check_guess' type="text" name="guess"/>
+                <button onclick='on_guess("check_guess")'type="button">Guess</button>
+
+                <ul>
+                    <!--The guess results will go here...-->
+                </ul>
+            </div>
+        </form>
+    </section>
+
+    <section id='success_page'>
+        <div>
+            <h1> Fantastic!</h1>
+            <a href='#' onclick='init_game()'>play again</a>
+        </div>
+    </section>
+</body>
+</html>

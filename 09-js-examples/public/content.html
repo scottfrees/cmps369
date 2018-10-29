@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id='mydiv'><p>This is my div</p></div>
+    <script>
+        const div = document.getElementById('mydiv');
+        console.log('Outer = ' + div.outerHTML);
+        console.log('Inner = ' + div.innerHTML);
+        console.log('Text = ' + div.textContent);
+        div.innderHTML = '<p>My change</p>';
+    </script>
+</body>
+</html>

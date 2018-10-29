@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type='text/css'>
+        p.link {
+            color:blue;
+            cursor:pointer;
+        }
+        p.link:hover {
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <p class='link' data-goto='http://www.ramapo.edu' onclick='go(this)'>Ramapo</p>
+    <p class='link' data-goto='http://www.mets.com'  onclick='go(this)'>Mets</p>
+    <script>
+       const go = (element) => {
+            const dest = element.dataset.goto;
+            window.location = dest;
+       }
+    </script>
+</body>
+</html>

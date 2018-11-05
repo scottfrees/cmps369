@@ -7,10 +7,10 @@
 </head>
 
 <body>
-    <div>
+    <div class='instructions container'>
         <p>Sorry, that is not the number, try again!</p>
     </div>
-    <form action="guess" method="post">
+    <form action="guess" method="post", class="container">
         <div>
             <label for="guess">Your next guess: </label>
             <input type="text" name="guess" />
@@ -19,7 +19,9 @@
     </form>
     <ul>
             <% for ( var i = results.length-1; i >= 0; i-- ) { %>
-            <li>
+            <% var c = results[i].result == "too low" ? "low" : "high" %>
+            <li class='container  <%= c %>'>
+               
                 <%= results[i].guess %> was
                 <%= results[i].result %>
             </li>

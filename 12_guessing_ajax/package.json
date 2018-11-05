@@ -1,0 +1,20 @@
+{
+  "name": "guessing-game",
+  "author": "cmps369",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "connect": "3.6.6",
+    "cookie-parser": "1.4.3",
+    "ejs": "*",
+    "express-session": "1.15.6",
+    "morgan": "*",
+    "serve-static": "1.13.2"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "description": ""
+}

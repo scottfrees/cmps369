@@ -1,3 +1,6 @@
+// Loads environment variables from a .env file - if present.
+// Should be the firs thing you do.
+require('dotenv').config();
 const connect = require('connect');
 const logger = require("morgan");
 const serve_static = require("serve-static");
@@ -12,12 +15,13 @@ const dateformat = require('dateformat');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
 const url = process.env.MONGO_URL || 'mongodb://localhost:27017/cmps369';
+
 let games; // will hold the games collection.
 
 
 // First we'll connect to the database, and once we do, THEN we'll start up the web server.
 // This way we can be sure we won't serve any requests without a valid connection to the database.
-const startup = async () => {
+const startup = async() => {
     try {
         const connection = await MongoClient.connect(url);
         const db = connection.db('cmps369');
@@ -33,7 +37,8 @@ const startup = async () => {
 
         http.createServer(app).listen(8080);
 
-    } catch (ex) {
+    }
+    catch (ex) {
         console.error(ex);
     }
     // Don't close the DB connection!  It is actually a pool
@@ -45,7 +50,7 @@ const startup = async () => {
 }
 
 
-const serve = async (req, res) => {
+const serve = async(req, res) => {
     try {
         console.log(req.url + " has been requested");
         if (req.url == "/start" || req.url == '/') {
@@ -95,7 +100,8 @@ const serve = async (req, res) => {
                 res.end(JSON.stringify({ result: 'high' }));
             }
         }
-    } catch (ex) {
+    }
+    catch (ex) {
         console.error(ex);
         res.writeHead(500, {});
         res.end();
@@ -103,20 +109,20 @@ const serve = async (req, res) => {
 }
 
 
-const mark_success = async (game_id) => {
+const mark_success = async(game_id) => {
     console.log(game_id);
     await games.updateOne({ _id: ObjectID(game_id) }, { '$set': { completed: true } });
 }
 
 // Calls an async function, but doesn't actually wait - there is no need
 // to..
-const log_guess = async (game_id, guess) => {
+const log_guess = async(game_id, guess) => {
     await games.updateOne({ _id: ObjectID(game_id) }, { '$push': { guesses: guess } });
 }
 
 // This is an async function that we want to wait on - since
 // we can't proceed until we have the result of the insertion!
-const init = async (req) => {
+const init = async(req) => {
     const value = Math.floor((Math.random() * 10) + 1);
     const doc = await games.insertOne({ date: new Date(), secret: value });
     req.session.game_id = doc.ops[0]._id;
@@ -126,7 +132,7 @@ const init = async (req) => {
 
 function render(res, view, model) {
     ejs.renderFile("templates/" + view + ".ejs", model,
-        function (err, result) {
+        function(err, result) {
             if (!err) {
                 res.end(result);
             }

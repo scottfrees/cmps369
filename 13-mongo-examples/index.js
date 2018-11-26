@@ -9,7 +9,7 @@ const url = process.env.MONGO_URL || 'mongodb://localhost:27017/test';
 
 // Remember you can't use await in the global scope, 
 // we can only use await inside an async function.
-const run = async () => {
+const run = async() => {
     let connection;
     try {
         connection = await MongoClient.connect(url);
@@ -25,6 +25,7 @@ const run = async () => {
         await courses.insertOne({ name: 'Web Development', subject: 'CMPS', number: 369 });
         await courses.insertOne({ name: 'Databases', subject: 'CMPS', number: 364 });
         await courses.insertOne({ name: 'Operating Systems', subject: 'CMPS', number: 311 });
+        await courses.insertOne({ name: 'Computer Graphics', subject: 'CMPS', number: 342 });
 
         // Simple queries
         const classes = await courses.find({}).toArray();
@@ -39,9 +40,11 @@ const run = async () => {
         // Another query.
         const hard_classes = await courses.find({ number: { $gte: 300 } }).toArray();
         console.log(hard_classes.map(c => `${c.subject} ${c.number}`).join('\n'));
-    } catch (ex) {
+    }
+    catch (ex) {
         console.error(ex);
-    } finally {
+    }
+    finally {
         connection.close();
     }
 }

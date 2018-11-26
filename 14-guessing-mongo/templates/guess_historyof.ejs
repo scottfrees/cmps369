@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - History of Game</title>
+    
+</head>
+<body>
+    <h1>Game</h1>
+    <p>Secret Number was <b><%= game.secret %></b></p>
+    <p>Game played on ><%= df(game.date, "dddd, mmmm dS, yyyy, h:MM:ss TT") %></p>
+    <ul>
+    <% for ( i in game.guesses ) { 
+        var guess = game.guesses[i]; %>
+        <li><%= guess %>
+        </li>
+    <% } %>
+    </ul>
+</body>
+</html>

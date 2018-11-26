@@ -1,3 +1,5 @@
 /01-tcp-servers/client
 /01-tcp-servers/server
 */node_modules/*
+*/.env
+.DS_Store

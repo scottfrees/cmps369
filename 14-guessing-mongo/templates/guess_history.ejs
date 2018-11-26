@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - pure JavaScript</title>
+    <style rel="stylesheet">
+    td {
+        text-align: center
+    }
+    table {
+        border-width: 3px;
+        border-style:solid;
+        border-color:black;
+        border-spacing:0px;
+    }
+    th, td {
+        border-bottom-width: 3px;
+        border-bottom-style:solid;
+        border-bottom-color:black;
+        padding:1em;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>A brief history of the guessing game...</h1>
+
+    <table> 
+        <thead>
+            <tr>
+                <th>Secret</th><th>Number of Guesses</th><th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+           <% for ( i in games ) { 
+                var game = games[i]; %>
+            <tr>
+                
+                <td><%= game.secret %></td>
+                <td><a href="/historyof?id=<%= game._id %>"><%= game.guesses.length %></a></td>
+                <td><%= df(game.date, "dddd, mmmm dS, yyyy, h:MM:ss TT") %></td>
+            </tr>
+            <% } %>
+        </tbody> 
+    </table>
+</body>
+</html>

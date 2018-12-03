@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@border-radius: 15px;
+@instructions-color: #FFFFB8;
+@low-color: #8099E6;
+@high-color: #A64D4D;
+@form-color: #E6E6E6;
+
+.bordered-block(@color) {
+  background-color: @color;
+  border-color: darken(@color, 20%);
+  border-style: solid;
+  border-width: 4px;
+  border-radius: @border-radius;
+  padding:20px;
+}
+
+.instructions {
+  .bordered-block(@instructions-color);
+  float:right;
+  width:250px;
+}
+
+form {
+  .bordered-block(@form-color);
+  width:450px;
+}
+
+button {
+  margin:20px;
+  padding:20px;   
+}
+
+li {
+  text-align:center;
+  list-style-type:none;
+  width:300px;
+  margin-bottom:0.5em;
+}
+
+.highGuess {
+  .bordered-block(@high-color);
+}
+
+.lowGuess {
+  .bordered-block(@low-color);
+}

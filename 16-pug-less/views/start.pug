@@ -1,0 +1,12 @@
+extends layout
+
+//- External resources (like css) is found in the layout file.
+//- The block content is the only unique part of the page.
+block content
+  .instructions
+    p Welcome to our guessing game.  The server is thinking of a number between 1 and 10 - try to guess what it is!
+  form(action="guess", method = "post")
+    div
+      label(for="guess") Your guess:
+      input(type="text", name="guess")
+      button(type="submit") Guess

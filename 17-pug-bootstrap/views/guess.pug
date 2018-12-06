@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container  
+    .row
+      .col-md-7.col-sm-12
+        .card 
+          .card-body
+            form(action = "guess", method = "post").form
+              .form-group
+                label(for="guess") Your guess:
+                input.form-control(type='number', name="guess")
+              .form-group
+                button.btn.btn-primary(type="submit") Guess
+      //- Make this column a full 12 grid columns on small screens, 
+      //- which forces it to the next "row"
+      .col-md-5.col-sm-12
+        ul.list-group.list-group-flush
+            each guess in results.reverse()
+              - var c = guess.result == 'too high' ? 'list-group-item-danger' : 'list-group-item-info';
+              li.list-group-item(class=c) #{guess.guess} was #{guess.result}

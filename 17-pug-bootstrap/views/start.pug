@@ -1,0 +1,24 @@
+extends layout
+
+//- External resources (like css) is found in the layout file.
+//- The block content is the only unique part of the page.
+block content
+
+  .container  
+    .row
+      .col.col-md-7.col-sm-12
+        .card 
+          .card-body
+            form(action="guess", method = "post").form
+              .form-group
+                label(for="guess").d-md-none Guess a number between 1 and 10:
+                label(for="guess").d-none.d-md-block Your guess:
+                input.form-control(type='number', name="guess")
+              .form-group
+                button.btn.btn-primary(type="submit") Guess
+     
+      .col.col-md-5.d-none.d-md-block
+        .alert.alert-warning
+          p Welcome to our guessing game.  The server is thinking of a number between 1 and 10 - try to guess what it is!
+    
+  

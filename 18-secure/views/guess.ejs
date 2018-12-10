@@ -1,0 +1,20 @@
+<!doctype html>
+
+<html>
+	
+	<head>
+		<title>Guessing game</title>
+	</head>
+	<body>
+	<ul>
+	<% for ( var i = 0; i < results.length; i++ ) { %>
+		<li><%= results[i].guess %> was <%=results[i].result %> </li>
+	<% } %>
+	</ul>
+		<form method="post" action="/guess">
+			<label for="guess" > Guess:  </label>
+			<input type="text" name="guess"/>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>

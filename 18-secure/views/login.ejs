@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing game - login</title>
+    <link rel='stylesheet' type = 'text/css' href='guess.css'/>
+</head>
+<body>
+    <div class='instructions'>
+        <p>
+            Please enter the super-secret user credentials needed to play this game...
+        </p>
+    </div>
+    <form action = "login" method = "post">
+        <div>
+            <p>
+                <label for="guess">Username:  </label>
+                <input type="text" name="username"/>
+            </p>
+            <p>
+                <label for="guess">Password:  </label>
+                <input type="password" name="password"/>
+            </p>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>

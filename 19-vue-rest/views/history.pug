@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        title Guessing game - game history
+        //- Bootstrap
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+
+        //- Bring in jQuery and Vue
+        script(src="https://code.jquery.com/jquery-3.2.1.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.js")
+    style.
+        .guess {
+            margin-right:1em;
+        }
+    body(style='padding-top:5em')
+        .container#history(v-cloak)
+            a.btn.btn-primary(href="/") Play
+            table.table.table-striped
+                thead
+                    tr
+                        th Date
+                        th Number
+                        th Guesses
+                tbody
+                    tr(v-for='game in games') 
+                        td {{format(game.date)}}
+                        td {{game.secret}}
+                        td 
+                            span.guess(v-for='guess in game.guesses') {{guess}}
+            
+
+        script.
+            new Vue({
+                el: '#history',
+
+                data: {
+                    games: []
+                },
+
+                mounted: function () {
+                    var v = this;
+                    v.fetch_games();
+                    setInterval(v.fetch_games, 1000 * 10);
+                },
+            
+                methods: {
+                    format: function (date) {
+                        return moment(date).format("MMM DD YYYY - hh:mm a");
+                    },
+                    fetch_games: function () {
+                        var v = this;
+                        $.getJSON("/history/games", function(data) {
+                            v.games = data.games;
+                            v.games.sort(function(a, b){
+                                return b.date - a.date;
+                            })
+                        })
+                    }
+                }
+            });
+
+
+        

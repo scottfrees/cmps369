@@ -1,0 +1,12 @@
+{"secret":6,"guesses":[],"date":1544721562948,"complete":false,"_id":"8oGWQyyrJfXOoFQf"}
+{"secret":6,"guesses":["1"],"date":1544721562948,"complete":true,"_id":"8oGWQyyrJfXOoFQf"}
+{"secret":6,"guesses":["1","3"],"date":1544721562948,"complete":true,"_id":"8oGWQyyrJfXOoFQf"}
+{"secret":6,"guesses":["1","3","8"],"date":1544721562948,"complete":true,"_id":"8oGWQyyrJfXOoFQf"}
+{"secret":6,"guesses":["1","3","8","6"],"date":1544721562948,"complete":true,"_id":"8oGWQyyrJfXOoFQf"}
+{"secret":4,"guesses":[],"date":1544721576024,"complete":false,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7","6"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7","6","5"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7","6","5","2"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7","6","5","2","5"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}
+{"secret":4,"guesses":["7","6","5","2","5","4"],"date":1544721576024,"complete":true,"_id":"y7NHjAQeIkx7TW8d"}

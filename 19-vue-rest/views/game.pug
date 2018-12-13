@@ -1,0 +1,91 @@
+doctype html
+html
+    head
+        title Guessing game - start page
+        //- Bootstrap
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+
+        //- Bring in jQuery and Vue
+        script(src="https://code.jquery.com/jquery-3.2.1.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js")
+
+
+    body(style='padding-top:5em')
+        .container#guess(data-game-id = game._id )
+            div(v-if='state == "start"')
+                .row
+                    .col-md-8.col-12-sm
+                        .form-group
+                            label(for="guess") Your guess:
+                            input.form-control(type="number", v-model='guess')/
+                        .form-group
+                            button.btn.btn-primary(type="button", v-on:click='postGuess()') Guess
+                    .col-md-4.hidden-sm.hidden-xs
+                        p.alert.alert-info.
+                            Welcome to our guessing game.  The server is thinking of a number between
+                            1 and 10 - try to guess what it is!
+            div(v-if='state == "guess"')
+                .row
+                    .col-md-8.col-12-sm
+                        .form-group
+                            label(for="guess") Your next guess:
+                            input.form-control(type="number", v-model='guess')/
+                        .form-group
+                            button.btn.btn-primary(type="button", v-on:click='postGuess()') Guess
+                ul.list-group
+                    li(v-for='guess in guesses', v-bind:class="{'list-group-item-info': guess.result=='low', 'list-group-item-danger': guess.result=='high'}").list-group-item
+                        span {{guess.value}} - too {{guess.result}}
+
+            .row(v-if='state == "complete"')
+                h1 Great job!  
+                p.text-info You guesssed that the secret number was {{secret}} in {{guesses.length}} tries!
+
+                a.btn.btn-primary(href='/') Play again
+                a.btn.btn-link(href='/history') View game history
+
+
+        //- Our vue app (could be in an external file too...)
+        //- It needs to be loaded after the document - since it tries to find 
+        //- the guess element
+        script.
+            new Vue({
+                el: '#guess',
+
+                data: {
+                    state: 'start',
+                    guesses: [],
+                    game_id: null,
+                    guess: "",
+                    secret: -1
+                },
+
+                mounted: function () {
+                    // The game id is what allows us to post guesses, 
+                    // the server can associate the game id with the game
+                    // in the database.
+                    this.game_id = $("#guess").data("game-id");
+                },
+            
+                methods: {
+                    postGuess: function () {
+                        var v = this;
+                        $.post("/"+this.game_id, {guess: this.guess}, function(data) {
+                            v.guesses.unshift({
+                                value: v.guess,
+                                result: data.result
+                            })
+                            if ( data.result == 'success') {
+                                v.state = 'complete'
+                                v.secret = v.guess;
+                            }
+                            else {
+                                v.state = 'guess';
+                                v.guess = ""
+                            }
+                        })
+                    }
+                }
+            });
+
+
+        

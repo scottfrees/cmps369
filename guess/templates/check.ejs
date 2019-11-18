@@ -1,0 +1,20 @@
+<!doctype http>
+<html>
+    <head>
+        <title>Check Page</title>
+    </head>
+    <body>
+        <p>The secret number is <%=secret%></p>
+        <p><%=message%></p>
+        <form action='check' method='post'>
+            <input type='hidden' name='secret' value='<%=secret%>'/>
+            <div>
+                <label>Your guess: </label>
+                <input type='number' name='guess'/>
+            </div>
+            <div>
+                <button type='submit'>Guess!</button>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,6 +1,6 @@
 const net = require('net');
 const host = 'localhost';
-const port = 3000;
+const port = 3001;
 
 /*  This just sets up node to read some lines from the console */
 const readline = require('readline');

@@ -6,23 +6,36 @@
 
 <body>
 	<form action="save.html" method="post">
-		<input type="date" name="name" value="test" />
-		<input type="checkbox" name="chkbx1" />
+		<input type="color" name="name" value="test" />
+
+		<p>
+			<label for='chkbx1'>Option 1</label>
+			<input type="checkbox" id="chkbx1" name="chkbx1" />
+
+		</p>
+		<p>
+			<input type="checkbox" id="chkbx2" name="chkbx2" />
+			<label for='chkbx2'>Option 2</label>
+		</p>
+		<p>
+			<input type="checkbox" id="chkbx3" name="chkbx3" />
+			<label for='chkbx3'>Option 3</label>
+		</p>
 		<textarea name='mult'>
         	This is some
         	multiline text...
         </textarea>
 		<div>
-			<p><input type="radio" name="radios" id="r1" value="a">A</p>
-			<p><input type="radio" name="radios" id="r2" value="b">B</p>
+			<p><input type="radio" name="radios" id="r1" value="a">A really long choice that you should certainly pick</p>
+			<p><input type="radio" name="radios" id="r2" value="b">A terrible decision</p>
 			<p><input type="radio" name="radios" id="r3" value="c">C</p>
 		</div>
 
 		<div>
 			<select name="select" id="select">
-				<option value="a">Option 1</option>
-				<option value="b">B</option>
-				<option value="c">option 3</option>
+				<option value="a">A really long choice that you should certainly pick</option>
+				<option value="b">A terrible decision</option>
+				<option value="c" selected>option 3</option>
 			</select>
 		</div>
 		<button type="submit">Save</button>

@@ -4,7 +4,8 @@ console.log('Echo server is running\r\n');
 // this function gets called each time a client
 // socket connects to the server.
 const on_socket_connect = function(socket) {
-  // just echo the same data bas to the client.
+  // just echo the same data back to the client.
+  console.log("Socket connected!");
   socket.on('data', function(data) {
     console.log("Node.js Server - Responding to client -> " + data);
     socket.write(data);
@@ -15,4 +16,4 @@ const on_socket_connect = function(socket) {
 // call whenever a client connects...
 const server = net.createServer(on_socket_connect);
 
-server.listen(3000, 'localhost');
+server.listen(3001, 'localhost');

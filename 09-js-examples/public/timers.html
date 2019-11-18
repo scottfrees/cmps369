@@ -1,36 +1,52 @@
 <!doctype html>
 <html>
-	<head>
-		<script>
-			
-			const changeColor = () => {
-				const p = document.getElementById("tl");
-				if ( p.className == "color1") p.className = "color2";
-				else if ( p.className == "color2") p.className = "color3";
-				else if ( p.className == "color3") p.className = "color1";
-				else  p.className = "color1";
-				
-			}
 
-		
-			
-		</script>
-		<style>
-			.color1 { background-color: green; }
-			.color2 { background-color: yellow; color:black;}
-			.color3 { background-color: red; }
-			p { 
-				margin: 1em; 
-				padding-top:1em;
-				text-align:center;
-				color:white;
-				border-radius: 25px; 
-				height: 75px; 
-				width:200px;
+<head>
+	<script>
+		const changeColor = () => {
+			const p = document.getElementById("tl");
+			if (p.className == "color1") p.className = "color2";
+			else if (p.className == "color2") p.className = "color3";
+			else if (p.className == "color3") p.className = "color1";
+			else p.className = "color1";
+
+		}
+
+		function run() {
+			for (var i = 0; i < 10000; i++) {
+				changeColor();
+				console.log(i);
 			}
-		</style>
-	</head>
-	<body onload="setInterval(changeColor, 1000);">
-		<p id="tl">Traffic light</p>
-	</body>
+		}
+	</script>
+	<style>
+		.color1 {
+			background-color: green;
+		}
+
+		.color2 {
+			background-color: yellow;
+			color: black;
+		}
+
+		.color3 {
+			background-color: red;
+		}
+
+		p {
+			margin: 1em;
+			padding-top: 1em;
+			text-align: center;
+			color: white;
+			border-radius: 25px;
+			height: 75px;
+			width: 200px;
+		}
+	</style>
+</head>
+
+<body onload="run();">
+	<p id="tl">Traffic light</p>
+</body>
+
 </html>

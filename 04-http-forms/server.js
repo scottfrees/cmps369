@@ -49,6 +49,11 @@ const process_post = (req, res) => {
             console.log(q + " -> " + post[q]);
             response += ("<p> " + q + "->" + post[q] + "</p>");
         }
+
+        // if chkbx1 is checked, add another message...
+        if (post.chkbx1) {
+            response += "<p>CHECKED</p>"
+        }
         response += "</body></html>";
         res.end(response);
     });
@@ -60,10 +65,13 @@ const process_get = (req, res) => {
     const url_parts = url.parse(req.url, true);
     const query = url_parts.query;
 
+    let response = "<html><body><h1>GETTED(?) data</h1>";
     for (const q in query) {
         console.log(q + " -> " + query[q]);
+        response += ("<p> " + q + "->" + query[q] + "</p>");
     }
-    res.end('That page wasn\'t found...\n');
+    response += "</body></html>";
+    res.end(response);
 }
 
 

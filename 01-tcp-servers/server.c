@@ -17,7 +17,7 @@ int main()
  
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htons(INADDR_ANY);
-    servaddr.sin_port = htons(3000);
+    servaddr.sin_port = htons(3001);
  
     bind(listen_fd, (struct sockaddr *) &servaddr, sizeof(servaddr));
 
@@ -26,18 +26,18 @@ int main()
         listen(listen_fd, 10);
      
         comm_fd = accept(listen_fd, (struct sockaddr*) NULL, NULL);
-     
+        fprintf(stdout, "Client socket has connected\n");
         do
         {
             bzero( str, 100);
-     
+            fprintf(stdout, "Reading from client socket\n");
             read_len = read(comm_fd,str,100);
             if ( read_len) {
-                printf("C Server - Responding to client -> %s",str);
+                fprintf(stdout, "C Server - Responding to client -> %s\n",str);
      
                 write(comm_fd, str, strlen(str)+1);
             }
         } while (read_len > 0);
-        printf("Client disconnected, listening for another connection");
+        fprintf(stdout, "Client disconnected, listening for another connection\n");
     } while (1);
 }

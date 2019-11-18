@@ -6,7 +6,7 @@ let secret;
 
 const clearGuesses = () => {
     const ps = document.getElementsByTagName('li');
-    for ( var i = ps.length-1; i >= 0; i-- ) {
+    for (var i = ps.length - 1; i >= 0; i--) {
         var p = ps[i];
         p.parentNode.removeChild(p);
     }
@@ -42,26 +42,26 @@ const mask = (start, check, success) => {
 
 const init_game = () => {
     // come up with a random number
-    secret = Math.floor(Math.random() *10) + 1;
+    secret = Math.floor(Math.random() * 10) + 1;
     console.log('Secret number = ' + secret);
     showStart();
-    clearGuesses();
+    //clearGuesses();
 }
 
 const on_guess = (input_id) => {
     const input = document.getElementById(input_id);
-    if ( input.value == secret ) {
+    if (input.value == secret) {
         showSuccess();
         return;
     }
-    
+
     // there is only one ul element... so ok.
     const list = document.getElementsByTagName('ul')[0];
     const li = document.createElement('li');
     let text;
-    if ( input.value < secret ) {
-       text = document.createTextNode(input.value + ' is too low');
-       li.className = 'lowGuess';
+    if (input.value < secret) {
+        text = document.createTextNode(input.value + ' is too low');
+        li.className = 'lowGuess';
     }
     else {
         text = document.createTextNode(input.value + ' is too high');
@@ -71,6 +71,3 @@ const on_guess = (input_id) => {
     list.appendChild(li);
     showCheck();
 }
-
-
-

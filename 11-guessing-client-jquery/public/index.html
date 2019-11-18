@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Guessing game - pure JavaScript</title>
-    <link rel='stylesheet' type = 'text/css' href='guess.css'/>
+    <link rel='stylesheet' type='text/css' href='guess.css' />
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src='guess.js'></script>
 
 
 
 </head>
+
 <body>
     <section id='start_page'>
         <div class='container instructions'>
             <p>
-                Welcome to our guessing game.  The "server" is thinking of a number between 1 and 10 - try to guess what it is!
+                Welcome to our guessing game. The "server" is thinking of a number between 1 and 10 - try to guess what it is!
             </p>
         </div>
         <form class='container'>
             <div>
                 <label for="guess">Your guess:  </label>
-                <input id='start_guess' type="text" name="guess"/>
+                <input id='start_guess' type="text" name="guess" />
                 <button type="button">Guess</button>
             </div>
         </form>
@@ -30,7 +32,7 @@
         <form method='post' class='container'>
             <div>
                 <label for="guess">Your next guess:  </label>
-                <input id='check_guess' type="text" name="guess"/>
+                <input id='check_guess' type="text" name="guess" />
                 <button type="button">Guess</button>
 
                 <ul>
@@ -43,8 +45,9 @@
     <section id='success_page'>
         <div>
             <h1> Fantastic!</h1>
-            <a href='#' onclick='init_game()'>play again</a>
+            <a href='#'>play again</a>
         </div>
     </section>
 </body>
+
 </html>

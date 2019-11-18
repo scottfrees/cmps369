@@ -15,7 +15,7 @@ const mask = (start, check, success) => {
     start ? $("#start_page").show() : $("#start_page").hide();
     check ? $("#check_page").show() : $("#check_page").hide();
     success ? $("#success_page").show() : $("#success_page").hide();
-    
+
 }
 
 const showStart = () => {
@@ -40,35 +40,32 @@ const showCheck = () => {
 $(document).ready(function() {
 
     init_game();
-
+    console.log($('button'));
     $('button').click(function() {
         const guess = $(this).siblings('input').val()
-        console.log("Guess is " + guess );
+        console.log("Guess is " + guess);
 
-        if ( guess == secret ) {
+        if (guess == secret) {
             showSuccess();
             return;
         }
-        else if ( guess < secret ) {
+        else if (guess < secret) {
             // show check, also add li element
             $('<li/>')
-                    .addClass('lowGuess')
-                    .text(guess + ' was too low')
-                    .appendTo('ul');
+                .addClass('lowGuess')
+                .text(guess + ' was too low')
+                .appendTo('ul');
         }
         else {
             $('<li/>')
-                    .addClass('highGuess')
-                    .text(guess + ' was too high')
-                    .appendTo('ul');
+                .addClass('highGuess')
+                .text(guess + ' was too high')
+                .appendTo('ul');
         }
         showCheck();
     });
 
-    $('a').click( function() {
+    $('a').click(function() {
         init_game();
     });
 });
-
-
-

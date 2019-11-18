@@ -1,0 +1,19 @@
+<!doctype http>
+<html>
+    <head>
+        <title>Start Page</title>
+    </head>
+    <body>
+        <p>I'm thinking of a number between 1-10, can you guess it?</p>
+        <form action='check' method='post'>
+            <input type='hidden' name='secret' value='<%=secret%>'/>
+            <div>
+                <label>Your guess: </label>
+                <input type='number' name='guess'/>
+            </div>
+            <div>
+                <button type='submit'>Guess!</button>
+            </div>
+        </form>
+    </body>
+</html>

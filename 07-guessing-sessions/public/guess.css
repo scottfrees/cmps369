@@ -1,53 +1,52 @@
-
 body {
-	font-family: "Verdana", arial;
-	padding:2em;
-}
-
-
-div {
-	padding:1em;
-	border-style: solid;
-	border-width: 4px;
-	background-color:#E6E6E6;
-	border-color: #808080;
-	width:450px;
-	border-radius: 15px;
+    font-family: "Verdana", arial;
+    padding: 2em;
 }
 
 .instructions {
-	background-color:#FFFFB8;
-	border-color:	#E6B800;
-	float:right;
-	width:250px;
+    background-color: #FFFFBB;
+    border-color: #E6B800;
+    float: right;
+    width: 40%;
+}
+
+div {
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: solid;
+    background-color: #E6E6E6;
+    border-color: #808080;
+    padding: 20px;
 }
 
 form {
-	text-align:right;
-	padding:1em;
+    width: 50%;
 }
 
-button {
-	margin-top:1em;
-	padding:1em;   
+
+ul {
+    padding-left: 0px;
 }
 
 li {
-	padding:0.5em;
-	text-align:center;
-	list-style-type:none;
-	border-style: solid;
-	border-width: 4px;
-	border-radius: 15px;
-	width:300px;
-	margin-bottom:0.5em;
+    padding: 15px;
+    text-align: center;
+    list-style-type: none;
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: solid;
+
+    width: 50%;
+    margin-top: 10px;
 }
 
 .highGuess {
-	background-color:#A64D4D;
-	border-color:	#8D1919;
+    background-color: #A64d4d;
+    border-color: #8d1919;
+    color: white;
 }
+
 .lowGuess {
-	background-color:#8099E6;
-	border-color:	#335CD6;
+    background-color: #8099e6;
+    border-color: #335CD6;
 }

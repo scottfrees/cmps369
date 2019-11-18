@@ -15,7 +15,7 @@ int main(int argc,char **argv)
     bzero(&servaddr,sizeof servaddr);
  
     servaddr.sin_family=AF_INET;
-    servaddr.sin_port=htons(3000);
+    servaddr.sin_port=htons(3001);
  
     inet_pton(AF_INET,"127.0.0.1",&(servaddr.sin_addr));
  

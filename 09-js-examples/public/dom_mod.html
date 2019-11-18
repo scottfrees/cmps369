@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title></title>
 </head>
+
 <body>
     <form id='my_form'>
-        <input type='text' id='test'/>
-        <button type='button' onclick= 'do_something()'>Click!</button>
-        <button type='button' onclick= 'remove_all()'>clear!</button>
+        <input type='text' id='test' value="original text" />
+        <button type='button' onclick='do_something()'>Click!</button>
+        <button type='button' onclick='remove_all()'>clear!</button>
     </form>
     <script>
         function do_something() {
@@ -20,14 +22,16 @@
             document.body.insertBefore(newNode, form);
             element.value = '';
         }
+
         function remove_all() {
             // need to go backwards, because the ps array is 'live'
             const ps = document.getElementsByTagName('p');
-            for ( let i = ps.length-1; i >= 0; i-- ) {
+            for (let i = ps.length - 1; i >= 0; i--) {
                 const p = ps[i];
                 p.parentNode.removeChild(p);
             }
         }
     </script>
 </body>
+
 </html>

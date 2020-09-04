@@ -16,7 +16,7 @@
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
     "express-session": "^1.15.6",
-    "mongodb": "^3.1.10",
+    "mongodb": "^3.1.13",
     "morgan": "^1.9.1",
     "serve-static": "^1.13.2"
   }
